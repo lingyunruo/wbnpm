@@ -39,3 +39,8 @@ wbnpm install xxx
 ```shell
 wbnpm uninstall xxx
 ```
+
+可以根据模版初始化一个react简易开发环境
+```js
+wbnpm init react
+```

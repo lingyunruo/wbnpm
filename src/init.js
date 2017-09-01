@@ -28,5 +28,7 @@ module.exports = function({args}) {
 		const reactBoilerplates = boilerplatesPath('react');
 
 		copyDir(reactBoilerplates, projectPath);
+
+		console.log(colors.green(`react app is initial`));
 	}
 };
