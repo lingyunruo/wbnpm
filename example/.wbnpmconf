@@ -1,0 +1,7 @@
+{
+	"domain": "gitlab.58corp.com",
+	"group": "lingyun01",
+	"alias": {
+		"wbapp": "git@gitlab.58corp.com:wuxianfe/wrn-seed-project.git"
+	}
+}

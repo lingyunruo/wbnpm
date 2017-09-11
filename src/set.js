@@ -9,7 +9,8 @@ const {
 	fsExistsSync,
 	getConfig,
 	setConfig,
-	execCommandSync
+	execCommandSync,
+	copyFile
 } = require('./utils');
 
 const configKeyList = ['domain', 'group', 'alias'];

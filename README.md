@@ -1,3 +1,50 @@
+#### A tool that mimics NPM
+
+##### Introduction
+We dont have local npm server, just have a local git lib. 
+So i take a case like that get package from gitlab server to project`s node_modules direction.
+
+##### Useage
+
+install
+```js
+npm install wbnpm -g
+```
+
+##### Set domain and alias
+```shell
+// 设置git域名
+wbnpm set domain gitlab.xxx.xxx
+
+// 设置组
+wbnpm set group nbgroup
+
+// 设置别名
+wnnpm set alias app git@gitlab.xxx.com/bn:app.git
+```
+
+##### init direction
+```shell
+wbnpm init
+```
+
+##### install component
+```shell
+wbnpm install xxx
+```
+
+##### uninstall component
+```shell
+wbnpm uninstall xxx
+```
+
+##### initialize a react project
+```js
+wbnpm init react
+```
+
+
+
 #### 一个模拟npm的工具
 
 ##### 简介
