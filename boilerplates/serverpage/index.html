@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<%
+for(var i=0;i<list.length;i++) {
+
+%>
+<p>
+    <a href="<%= `${currentUrl}/${list[i]}` %>"><%= list[i] %></a>
+</p>
+<%
+}
+%>
+
+</body>
+</html>

@@ -6,4 +6,4 @@ program
 	.parse(process.argv);
 
 
-require('../lib/uninstall')(program);
+require('../src/uninstall')(program);

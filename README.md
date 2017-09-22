@@ -60,6 +60,11 @@ wbnpm init react
 npm install wbnpm -g
 ```
 
+初始化目录
+```shell
+wbnpm init
+```
+
 设置域名和组或者别名
 ```shell
 // 设置git域名
@@ -70,11 +75,6 @@ wbnpm set group nbgroup
 
 // 设置别名
 wnnpm set alias app git@gitlab.xxx.com/bn:app.git
-```
-
-初始化目录
-```shell
-wbnpm init
 ```
 
 安装组件
@@ -90,4 +90,9 @@ wbnpm uninstall xxx
 可以根据模版初始化一个react简易开发环境
 ```js
 wbnpm init react
+```
+
+可以开启简易的服务器
+```js
+wbnpm server
 ```

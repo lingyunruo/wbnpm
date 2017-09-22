@@ -5,4 +5,4 @@ const program = require('commander');
 program
 	.parse(process.argv);
 
-require('../lib/server')(program);
+require('../src/server')(program);

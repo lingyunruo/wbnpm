@@ -1,4 +1,8 @@
 {
-  "presets": ["es2015", "es2017"],
-  "plugins": ["transform-async-to-module-method"]
+  "presets": [['env', {
+    "targets": {
+      "node": "current"
+    }
+  }]],
+  "plugins": ["transform-async-to-generator"]
 }

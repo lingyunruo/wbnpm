@@ -9,7 +9,7 @@ class Home extends Component {
 
     render() {
         return (
-            <div>这是一个测试页面</div>
+            <div className="may">这是一个测试页面</div>
         )
     }
 }

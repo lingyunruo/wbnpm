@@ -1,12 +1,12 @@
-const { join } = require('path');
+const {join} = require('path');
 const colors = require('colors');
 const EventEmitter = require('events');
 
-class MyEmitter extends EventEmitter {}
+class MyEmitter extends EventEmitter {
+}
 const myEmitter = new MyEmitter();
 
 const {
-	existGit,
 	gitClone,
 	getConfig,
 	execCommandSync,
@@ -22,17 +22,16 @@ const projectCwd = process.cwd();
 function install(moduleName) {
 
 	const cacheCwd = join(projectCwd, `.cache_${new Date().getTime()}`);
-	const alias = getConfig('alias')?getConfig('alias')[moduleName]:{};
+	const alias = getConfig('alias') ? getConfig('alias')[moduleName] : {};
 	const gitDomain = getConfig('domain');
 	const gitGroup = getConfig('group');
 	const gitUrl = alias ? alias : `git@${gitDomain}:${gitGroup}/${moduleName}.git`;
 	const nodeModuleDir = join(projectCwd, 'node_modules');
 	const moduleDir = join(projectCwd, `node_modules/${moduleName}`);
-	let git = existGit(gitUrl);
 
-	if (git) {
-		gitClone(gitUrl, cacheCwd);
+	let res = gitClone(gitUrl, cacheCwd);
 
+	if (res.status === 0) {
 		if (!fsExistsSync(nodeModuleDir)) {
 			createDir(nodeModuleDir);
 		}
@@ -56,11 +55,11 @@ function install(moduleName) {
 	myEmitter.emit('event', moduleName);
 }
 
-module.exports = function ({ args }) {
+module.exports = function ({args}) {
 
 	const moduleName = args[0];
 
-	if(moduleName) {
+	if (moduleName) {
 		install(moduleName);
 	}
 	else {
@@ -71,7 +70,7 @@ module.exports = function ({ args }) {
 
 		myEmitter.on('event', (modulename) => {
 			count++;
-			if(modulelist[count]) {
+			if (modulelist[count]) {
 				install(modulelist[count]);
 			}
 			else {

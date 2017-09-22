@@ -5,4 +5,4 @@ const program = require('commander');
 program
 	.parse(process.argv);
 
-require('../lib/install')(program);
+require('../src/install')(program);

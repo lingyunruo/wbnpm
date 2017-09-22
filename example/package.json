@@ -8,9 +8,6 @@
 	},
 	"author": "",
 	"license": "ISC",
-	"devDependencies": {
-		"lodash": "^4.17.4"
-	},
 	"WBDependencies": {
 		"wbapp": "0.0.0"
 	}

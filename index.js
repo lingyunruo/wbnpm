@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+require('babel-register');
+
 const fs = require('fs');
 const {join} = require('path');
 const program = require('commander');
