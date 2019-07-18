@@ -48,7 +48,9 @@ wbnpm init react
 #### 一个模拟npm的工具
 
 ##### 简介
-由于只有私有gitlab，没有自己的npm服务器，所以采取了这样一个直接从gitlab上拉取代码到node_modules文件夹下的手段。方法兼容npm，也就是如果找不到对应git仓库，那么就直接执行npm
+由于只有私有gitlab，没有自己的npm服务器，所以采取了这样一个直接从gitlab上拉取代码到node_modules文件夹下的手段。方法兼容npm，也就是如果找不到对应git仓库，那么就直接执行npm。
+
+建立方式是，先建立git group，在group里的每一个git仓库都是一个模块。所以需要确认在本地install的时候有git的权限。
 
 
 ##### 使用方法
@@ -85,14 +87,4 @@ wbnpm install xxx
 卸载组件
 ```shell
 wbnpm uninstall xxx
-```
-
-可以根据模版初始化一个react简易开发环境
-```js
-wbnpm init react
-```
-
-可以开启简易的服务器
-```js
-wbnpm server
 ```
